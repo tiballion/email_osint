@@ -16,7 +16,6 @@ def get_token():
 
 
 def instagram(email):
-    res = ""
     try:
         token = get_token()
         if token == "":
