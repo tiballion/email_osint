@@ -8,11 +8,10 @@ def discord(email) -> str:
     r = requests.post(endpoint, data=json_str)
     if r.status_code == 400:
         if "EMAIL_ALREADY_REGISTERED" in r.text:
-            res = "Discord 🐀"
+            return "Discord 🐀"
         else:
-            res = "Discord [Not here!]"
+            return "Discord [Not here!]"
     elif r.status_code == 429:
-        res = "Discord [Rate limited!]"
+        return "Discord [Rate limited!]"
     else:
-        res = "Discord [Couldn't check!]"
-    return res
+        return "Discord [Couldn't check!], invalid status code"

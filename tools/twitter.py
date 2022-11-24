@@ -10,9 +10,8 @@ def twitter(email):
     if r.status_code == 200:
         body = json.loads(r.content)
         if body["taken"]:
-            res = "Twitter \U0001f440"
+            return "Twitter \U0001f440"
         else:
-            res = "Twitter [Not here!]"
+            return "Twitter [Not here!]"
     else:
-        res = "Twitter [Couldn't check!]"
-    return res
+        return "Twitter [Couldn't check!]"

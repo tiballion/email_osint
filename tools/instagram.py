@@ -19,7 +19,7 @@ def instagram(email):
     try:
         token = get_token()
         if token == "":
-            res = "Instagram [Couldn't check!]"
+            return "Instagram [Couldn't check!], couldn't get token"
         else:
             endpoint = "https://www.instagram.com/accounts/web_create_ajax/attempt/"
             data = {"email": email}
@@ -28,12 +28,11 @@ def instagram(email):
                                                  "X-Csrftoken": token}, data=data)
             if r.status_code == 200:
                 if "email_is_taken" in r.text:
-                    res = "Instagram \U0001f440"
+                    return "Instagram \U0001f440"
                 else:
-                    res = "Instagram [Not here!]"
+                    return "Instagram [Not here!]"
             else:
-                res = "Instagram [Couldn't check!]"
+                return "Instagram [Couldn't check!], Status code isn't 200"
     except Exception as e:
         print(e)
-        res = "Instagram [Couldn't check!]"
-    return res
+        return "Instagram [Couldn't check!]"
