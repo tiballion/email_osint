@@ -1,10 +1,11 @@
 from tools.instagram import instagram
+from tools.discord import discord
 
 
 def main():
     email = input("Enter email: ")
-    result = instagram(email)
-    print(result)
+    print(instagram(email))
+    print(discord(email))
 
 
 if __name__ == "__main__":
