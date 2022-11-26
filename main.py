@@ -27,8 +27,7 @@ def main():
     email = input("Enter the email: ")
     if is_valid_email(email):
         res = [instagram(email), discord(email), twitter(email), spotify(email)]
-        for r in res:
-            print(r)
+        _ = [print(r) for r in res]
     else:
         print("Invalid email!")
         exit()
