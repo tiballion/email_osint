@@ -13,10 +13,11 @@ def spotify(email):
     }
 
     res = requests.post(endpoint, data=data, headers=headers)
-    if res.status_code == 200:
+    """if res.status_code == 200:
         if res.json()['status'] == 1:
             return 'Spotify \U0001f440'
         else:
             return 'Spotify [Not here!]'
     else:
-        return 'Spotify [Couldn\'t check!]'
+        return 'Spotify [Couldn\'t check!]'"""
+    return "Spotify checker not currently working"
