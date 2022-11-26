@@ -1,3 +1,5 @@
+from colorama import Fore, Back, Style
+
 from tools.instagram import instagram
 from tools.discord import discord
 from tools.twitter import twitter
@@ -7,7 +9,7 @@ from tools.email_check import is_valid_email
 
 def header():
     """Prints the header"""
-    print("""
+    print(Fore.RED + """
 888       888 888                                                                                   .d8888b.  
 888   o   888 888                                                                                  d88P  Y88b 
 888  d8b  888 888                                                                                       .d88P 
@@ -18,8 +20,9 @@ def header():
 888P     Y888 888  888  "Y88P"       "Y888888 888     "Y8888        "Y88888  "Y88P"   "Y88888         888     
                                                                         888                                   
                                                                    Y8b d88P                                   
-                                                                    "Y88P"                                    
-    """)
+                                                                    "Y88P"                                    """)
+    print(Fore.GREEN + "Made by: " + Fore.BLUE + "tiballion")
+    print(Style.RESET_ALL)
 
 
 def main():
