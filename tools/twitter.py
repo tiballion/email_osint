@@ -12,6 +12,6 @@ def twitter(email):
         if body["taken"]:
             return "Twitter \U0001f440"
         else:
-            return "Twitter [Not here!]"
+            return "Twitter \U0001F6AB"
     else:
         return "Twitter [Couldn't check!]"

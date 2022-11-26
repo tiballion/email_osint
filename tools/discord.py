@@ -10,7 +10,7 @@ def discord(email) -> str:
         if "EMAIL_ALREADY_REGISTERED" in r.text:
             return "Discord 🐀"
         else:
-            return "Discord [Not here!]"
+            return "Discord \U0001F6AB"
     elif r.status_code == 429:
         return "Discord [Rate limited!]"
     else:

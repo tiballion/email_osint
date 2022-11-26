@@ -30,7 +30,7 @@ def instagram(email):
                 if "email_is_taken" in r.text:
                     return "Instagram \U0001f440"
                 else:
-                    return "Instagram [Not here!]"
+                    return "Instagram \U0001F6AB"
             else:
                 return "Instagram [Couldn't check!], Status code isn't 200"
     except Exception as e:
